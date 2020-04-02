@@ -1,5 +1,8 @@
 var express = require('express');
 var path = require("path");
+// var apiRoute = require("./routes/apiRoute");
+// var htmlRoute = require("./routes/htmlRoute");
+
 
 var app = express();
 var PORT = 8000;
@@ -11,7 +14,26 @@ app.use(express.json());
 
 // Create arrays to hold basic data
 
-let tables = []
+let tables = [
+    {
+        tableNo: "",
+        id: "",
+        name: "",
+        email: "",
+        phone: ""
+    }
+
+]
+
+let waitList = [
+    {
+        tableNo: "",
+        id: "",
+        name: "",
+        email: "",
+        phone: ""
+    }
+];
 
 
 
@@ -19,16 +41,21 @@ let tables = []
 
 // Routes for getting and posting data
 
+app.get("/html", function(req, res){
+    res.sendFile(path.join(__dirname, reserve.html ))
+})
+
+
+app.post("/html", function(req, res){
+    res.join
+})
+
+
+// routes for displaying the html pages
 
 
 
-
-
-// routres for displaying the html pages
-
-
-
-
+console.log("Hello World");
 
 
 
