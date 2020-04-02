@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require("path");
-// var apiRoute = require("./routes/apiRoute");
-// var htmlRoute = require("./routes/htmlRoute");
+var apiRoute = require("./routes/apiRoute");
+var htmlRoute = require("./routes/htmlRoute");
 
 
 var app = express();
@@ -14,26 +14,9 @@ app.use(express.json());
 
 // Create arrays to hold basic data
 
-let tables = [
-    {
-        tableNo: "",
-        id: "",
-        name: "",
-        email: "",
-        phone: ""
-    }
+let tables = [] ;
 
-]
-
-let waitList = [
-    {
-        tableNo: "",
-        id: "",
-        name: "",
-        email: "",
-        phone: ""
-    }
-];
+let waitList = [];
 
 
 
@@ -42,12 +25,14 @@ let waitList = [
 // Routes for getting and posting data
 
 app.get("/html", function(req, res){
-    res.sendFile(path.join(__dirname, reserve.html ))
+    res.sendFile(path.join(__dirname, "reserve.html" ))
 })
 
 
 app.post("/html", function(req, res){
-    res.join
+    // re.join some stuff here
+    
+    //  res.join()
 })
 
 
